@@ -7,7 +7,7 @@ from colorama import Fore
 """
 Read some a r t
 """
-artf = open("./ressources/text/art.txt", "r", encoding="utf8")
+artf = open("/opt/vhbot/ressources/text/art.txt", "r", encoding="utf8")
 art = artf.read()
 art = art.split("-$")
 #print(secrets.choice(art))
@@ -19,10 +19,10 @@ Reads from the config(s) file(s)
 conf = configparser.ConfigParser()
 
 # Attempt to read from default settings
-conf.read_file(open("default.conf", encoding="utf-8"))
+conf.read_file(open("/opt/vhbot/default.conf", encoding="utf-8"))
 
 # Attempt to read from instance configuration file
-f = conf.read("instance.conf", encoding="utf-8")
+f = conf.read("/opt/vhbot/instance.conf", encoding="utf-8")
 
 # Read configuration and set it as local variable
 for section in conf.sections():
